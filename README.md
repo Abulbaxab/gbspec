@@ -19,9 +19,9 @@
         D -->|Yes| E[counter = counter + 1]
             E --> F[i = i + step] --> C
         D -->|No| F
-    C -->|No| G["cutArray[counter]<br>i = 0"] --> H{i < size}
+    C -->|No| G["resArray[counter]<br>i = 0"] --> H{i < size}
         H -->|Yes| I{"array[i].length <= 3"}
-            I -->|Yes| J["cutArray[j] = array[i]<br>j = j + 1"]
+            I -->|Yes| J["resArray[j] = array[i]<br>j = j + 1"]
                 J --> K[i = i + step] --> H
             I -->|No| K
         H -->|No| End:::endClass
